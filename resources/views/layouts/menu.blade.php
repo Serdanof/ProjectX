@@ -100,7 +100,15 @@
             <span class="aside-menu-title">{{ __('messages.admins') }}</span>
         </a>
     </li>
-    <li class="nav-item {{ Request::is('adjustments/users*') ? 'active' : '' }}">
+    <li class="nav-item {{ Request::is('admin/clients*') ? 'active' : '' }}">
+        <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('clients.index') }}">
+            <span class="menu-icon">
+                <i class="fas fa-user-alt pe-3"></i>
+            </span>
+            <span class="aside-menu-title">{{ __('messages.clients') }}</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('admin/adjustments*') ? 'active' : '' }}">
         <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('adjustments.index') }}">
             <span class="menu-icon">
                 <i class="fas fa-user-alt pe-3"></i>
@@ -108,12 +116,20 @@
             <span class="aside-menu-title">{{ __('messages.adjustments') }}</span>
         </a>
     </li>
-    <li class="nav-item {{ Request::is('admin/client*') ? 'active' : '' }}">
-        <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('clients.index') }}">
+    <li class="nav-item {{ Request::is('admin/transfers*') ? 'active' : '' }}">
+        <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('transfers.index') }}">
             <span class="menu-icon">
                 <i class="fas fa-user-alt pe-3"></i>
             </span>
-            <span class="aside-menu-title">{{ __('messages.clients') }}</span>
+            <span class="aside-menu-title">{{ __('messages.transfers') }}</span>
+        </a>
+    </li>
+    <li class="nav-item {{ Request::is('admin/warehouse*') ? 'active' : '' }}">
+        <a class="nav-link d-flex align-items-center py-3" aria-current="page" href="{{ route('transfers.index') }}">
+            <span class="menu-icon">
+                <i class="fas fa-user-alt pe-3"></i>
+            </span>
+            <span class="aside-menu-title">{{ __('messages.warehouse') }}</span>
         </a>
     </li>
 

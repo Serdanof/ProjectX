@@ -1,5 +1,8 @@
 <?php
 use App\Http\Controllers\API\AdjustmentAPIController;
+use App\Http\Controllers\API\TransferAPIController;
+use App\Http\Controllers\API\WarehouseAPIController;
+
 use App\Http\Controllers\AdminCurrencyController;
 use App\Http\Controllers\AdminPaymentController;
 use App\Http\Controllers\AdminPaypalController;
@@ -128,6 +131,13 @@ Route::prefix('admin')->middleware(['auth', 'xss', 'role:admin', 'check_subscrip
 
     //Adjustment route
     Route::resource('adjustments',AdjustmentAPIController::class);
+    //Transfers route
+    Route::resource('transfers', TransferAPIController::class);
+    // warehouses route
+    Route::resource('warehouses', WarehouseAPIController::class);
+    Route::get('warehouse-details/{id}', [WarehouseAPIController::class, 'warehouseDetails']);
+    Route::get('warehouses', [WarehouseAPIController::class, 'index']);
+    Route::get('warehouse-report', [WarehouseAPIController::class, 'warehouseReport'])->name('report-warehouse');
 
     //Category Route
     Route::resource('categories', CategoryController::class)->names([

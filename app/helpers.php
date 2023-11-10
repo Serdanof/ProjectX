@@ -1,4 +1,5 @@
 <?php
+use App\Models\ManageStock;
 
 use App\Models\AdminCurrency;
 use App\Models\City;
@@ -28,6 +29,8 @@ use Stancl\Tenancy\Database\Models\Tenant;
 use Stancl\Tenancy\Database\TenantScope;
 use Stripe\Stripe;
 
+
+
 if (! function_exists('getPageSize')) {
     /**
      * @return mixed
@@ -44,6 +47,39 @@ if (! function_exists('getLogInUser')) {
     function getLogInUser()
     {
         return Auth::user();
+    }
+}
+if (! function_exists('manageStock')) {
+    /**
+     * @param $request
+     * @return mixed
+     */
+    function manageStock($warehouseID, $productID, $qty = 0)
+    {
+        $product = ManageStock::whereWarehouseId($warehouseID)
+            ->whereProductId($productID)
+            ->first();
+
+        if ($product) {
+            $totalQuantity = $product->quantity + $qty;
+
+            if (($product->quantity + $qty) < 0) {
+                $totalQuantity = 0;
+            }
+            $product->update([
+                'quantity' => $totalQuantity,
+            ]);
+        } else {
+            if ($qty < 0) {
+                $qty = 0;
+            }
+
+            ManageStock::create([
+                'warehouse_id' => $warehouseID,
+                'product_id' => $productID,
+                'quantity' => $qty,
+            ]);
+        }
     }
 }
 
