@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Upgrade Guide | InfyInvoices-SasS</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="../images/invoiceLogo.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/circular-std-font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.js"></script>
+    <meta name="description"
+          content="InfyInvoices-SaaS is a fully-featured Multi Invoice Management System to manage your customer invoices and manage its invoice payment.">
+
+    <link rel="preload" href="../assets/css/0.styles.36c25529.css" as="style">
+    <link rel="preload" href="../js/styles.js" as="script">
+    <link rel="preload" href="../js/2.js" as="script">
+    <link rel="preload" href="../js/12.js" as="script">
+    <link rel="prefetch" href="../js/10.js">
+    <link rel="prefetch" href="../js/11.js">
+    <link rel="prefetch" href="../js/3.js">
+    <link rel="prefetch" href="../js/4.js">
+    <link rel="prefetch" href="../js/5.js">
+    <link rel="prefetch" href="../js/6.js">
+    <link rel="prefetch" href="../js/7.js">
+    <link rel="prefetch" href="../js/8.js">
+    <link rel="prefetch" href="../js/9.js">
+    <link rel="stylesheet" href="../assets/css/0.styles.36c25529.css">
+</head>
+<body>
+<div id="app" data-server-rendered="true">
+    <div class="theme-container">
+        <header class="navbar">
+            <div class="sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"
+                     class="icon">
+                    <path fill="currentColor"
+                          d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+                </svg>
+            </div>
+            <a href="../index.html" class="home-link router-link-active"><img src="../images/invoice_logo.png" alt="InfyInvoices-SasS"
+                                                                  class="logo"> <span class="site-name can-hide">InfyInvoices-SasS</span></a>
+            <div class="links"><!---->
+                <nav class="nav-links can-hide">
+                    <div class="nav-item"><a href="../index.html" class="nav-link">
+                        Home
+                    </a></div>
+                    <div class="nav-item"><a href="../docs/index.html" class="nav-link">
+                        Docs
+                    </a></div>
+                    <div class="nav-item"><a href="../releases/index.html" class="nav-link">
+                        Releases
+                    </a></div>
+                    <div class="nav-item"><a href="#" aria-current="page"
+                                             class="nav-link router-link-exact-active router-link-active">
+                        Upgrade Guide
+                    </a></div> <!----></nav>
+            </div>
+        </header>
+        <div class="sidebar-mask"></div>
+        <!-- <aside class="sidebar">
+            <nav class="nav-links">
+                <div class="nav-item"><a href="/" class="nav-link">
+                    Home
+                </a></div>
+                <div class="nav-item"><a href="/docs/" class="nav-link">
+                    Docs
+                </a></div>
+                <div class="nav-item"><a href="/releases/" class="nav-link">
+                    Releases
+                </a></div>
+                <div class="nav-item"><a href="/upgrade/" aria-current="page"
+                                         class="nav-link router-link-exact-active router-link-active">
+                    Upgrade Guide
+                </a></div> </nav>
+            <ul class="sidebar-links">
+                <li>
+                    <section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Upgrade Guide</span>
+                        </p>
+                        <ul class="sidebar-links sidebar-group-items">
+                            <li><a href="#old-upgrade-guide" class="sidebar-link">Old Upgrade Guide</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#upgrade-to-latest-version" class="sidebar-link">Upgrade to latest
+                                version</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#upgrading-from-v4-2-0-to-v4-3-0"
+                                                                      class="sidebar-link">Upgrading from v4.2.0 to
+                                        v4.3.0</a></li>
+                                    <li class="sidebar-sub-header"><a href="#upgrading-from-v4-0-0-to-v4-2-0"
+                                                                      class="sidebar-link">Upgrading from v4.0.0 to
+                                        v4.2.0</a></li>
+                                    <li class="sidebar-sub-header"><a href="#upgrading-from-v3-0-0-to-v4-0-0"
+                                                                      class="sidebar-link">Upgrading from v3.0.0 to
+                                        v4.0.0</a></li>
+                                    <li class="sidebar-sub-header"><a href="#upgrading-from-v2-5-0-to-v3-0-0"
+                                                                      class="sidebar-link">Upgrading from v2.5.0 to
+                                        v3.0.0</a></li>
+                                    <li class="sidebar-sub-header"><a href="#upgrading-from-v2-0-0-to-v2-5-0"
+                                                                      class="sidebar-link">Upgrading from v2.0.0 to
+                                        v2.5.0</a></li>
+                                    <li class="sidebar-sub-header"><a href="#upgrading-from-v1-0-0-to-v2-0-0"
+                                                                      class="sidebar-link">Upgrading from v1.0.0 to
+                                        v2.0.0</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </aside> -->
+        <main class="page">
+            <div class="theme-default-content content__default" style="margin-left:25%;margin-top:9%;"><h1 id="upgrade-guide">
+                Upgrade Guide</h1>
+                <!-- <p>Before starting upgrade we recommend to backup your files and export your current database.</p>
+                <h3 id="prerequisite"><a href="#prerequisite" class="header-anchor">#</a> Prerequisite</h3>
+                <p>Before starting upgrade we recommend to back up your all files and export your current database. so
+                    in case if anything goes wrong, you can restore the previous version.</p>
+                <ol>
+                    <li>Backup your whole folder</li>
+                    <li>Backup &amp; Export your database via phpymadmin</li>
+                </ol>
+                <h3 id="backup-sensitive-files-and-folders"><a href="#backup-sensitive-files-and-folders"
+                                                               class="header-anchor">#</a> Backup Sensitive Files and
+                    Folders</h3>
+                <p>Backup the following folders and files.</p>
+                <ol>
+                    <li>File - <code>.env</code></li>
+                    <li>Folder - Any new languages that you added in <code>resources/lang/</code></li>
+                    <li>Folder - <code>public/uploads/</code></li>
+                </ol>
+                <h3 id="replace-the-latest-code"><a href="#replace-the-latest-code" class="header-anchor">#</a> Replace
+                    the latest code</h3>
+                <ol>
+                    <li>Delete all your existing code (you can also rename the current folder or move all content to
+                        some other folder, if possible)
+                    </li>
+                    <li>Upload the latest <code>dist.zip</code> to the server</li>
+                    <li>Extract the zip</li>
+                    <li>Put old <code>.env</code> file back</li>
+                    <li>Put <code>resources/lang/</code> and <code>public/uploads</code> folder back (or you can merge)
+                    </li>
+                    <li>Edit <code>.env</code> and change <code>UPGRADE_MODE=true</code></li>
+                    <li>Run a database upgrade script <code>https://{YOUR_URL}/upgrade/database</code></li>
+                    <li>Edit <code>.env</code> and change <code>UPGRADE_MODE=false</code></li>
+                    <li>Verify that latest version is visible in footer</li>
+                </ol>
+                <p>Check everything is working fine.</p>
+                <h3 id="post-upgrade-steps"><a href="#post-upgrade-steps" class="header-anchor">#</a> Post Upgrade Steps
+                </h3>
+                <ol>
+                    <li>Add newly added languages keys (if you have added a new languages)</li>
+                    <li>Apply/Replace any custom changes that you made to the code.</li>
+                </ol>
+                <p>Hope your upgrade went well and working fine.
+                    If you are facing any problem with the upgrade, feel to contact our support at <a
+                            href="https://infyomlabs.authordesk.app" target="_blank" rel="noopener noreferrer">https://infyomlabs.authordesk.app<span><svg
+                            xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px"
+                            viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor"
+                                                                                                     d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a></p>
+                <h3 id="from-v4-6-0"><a href="#from-v4-6-0" class="header-anchor">#</a> From v4.6.0</h3>
+                <ul>
+                    <li>For enable Recurring Invoice feature, you need to enable Cron Jobs on cPanel.</li>
+                    <li>Documentation step for enable Cron job. <a href="../docs/index.html#cron-jobs-setup">Click here</a></li>
+                </ul>
+                <h2 id="old-upgrade-guide"><a href="#old-upgrade-guide" class="header-anchor">#</a> Old Upgrade Guide
+                </h2>
+                <p>Before starting upgrade we recommenced to backup your files and export your current database.</p>
+                <p><strong>NOTE : If you are non-technical person then please use dist.zip to replace files and if you
+                    are technical person then use src.zip</strong></p>
+                <h2 id="upgrade-to-latest-version"><a href="#upgrade-to-latest-version" class="header-anchor">#</a>
+                    Upgrade to latest version</h2>
+                <h3 id="upgrading-from-v4-2-0-to-v4-3-0"><a href="#upgrading-from-v4-2-0-to-v4-3-0"
+                                                            class="header-anchor">#</a> Upgrading from v4.2.0 to v4.3.0
+                </h3> <h4 id="for-technical-users"><a href="#for-technical-users" class="header-anchor">#</a> For
+                    Technical Users:</h4>
+                <ul>
+                    <li>Download v4.3.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v4.3.0 files into your existing version v4.2.0</li>
+                    <li>Run composer install to update composer dependencies</li>
+                    <li>Run <code>php artisan migrate</code> to make new build</li>
+                    <li>Run npm install</li>
+                    <li>And at last Run npm run dev to make new build</li>
+                    <li>That's it!, you are ready to go with new version v4.3.0</li>
+                </ul>
+                <h4 id="for-non-technical-users"><a href="#for-non-technical-users" class="header-anchor">#</a> For Non
+                    Technical Users:</h4>
+                <ul>
+                    <li>Download v4.3.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v4.3.0 files/directories into your existing version 4.2.0</li>
+                    <li>Now please call this URL once <code>YOUR_APP_URL/upgrade-to-v4-3-0</code></li>
+                    <li>That's it!, you are ready to go with new version v4.3.0</li>
+                </ul>
+                <h3 id="upgrading-from-v4-0-0-to-v4-2-0"><a href="#upgrading-from-v4-0-0-to-v4-2-0"
+                                                            class="header-anchor">#</a> Upgrading from v4.0.0 to v4.2.0
+                </h3> <h4 id="for-technical-users-2"><a href="#for-technical-users-2" class="header-anchor">#</a> For
+                    Technical Users:</h4>
+                <ul>
+                    <li>Download v4.2.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v4.2.0 files into your existing version v4.0.0</li>
+                    <li>Run composer install to update composer dependencies</li>
+                    <li>Run <code>php artisan migrate</code> to make new build</li>
+                    <li>Run npm install</li>
+                    <li>And at last Run npm run dev to make new build</li>
+                    <li>That's it!, you are ready to go with new version v4.2.0</li>
+                </ul>
+                <h4 id="for-non-technical-users-2"><a href="#for-non-technical-users-2" class="header-anchor">#</a> For
+                    Non Technical Users:</h4>
+                <ul>
+                    <li>Download v4.2.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v4.2.0 files/directories into your existing version 4.0.0</li>
+                    <li>Now please call this URL once <code>YOUR_APP_URL/upgrade-to-v4.2.0</code></li>
+                    <li>That's it!, you are ready to go with new version v4.2.0</li>
+                </ul>
+                <h3 id="upgrading-from-v3-0-0-to-v4-0-0"><a href="#upgrading-from-v3-0-0-to-v4-0-0"
+                                                            class="header-anchor">#</a> Upgrading from v3.0.0 to v4.0.0
+                </h3> <h4 id="for-technical-users-3"><a href="#for-technical-users-3" class="header-anchor">#</a> For
+                    Technical Users:</h4>
+                <ul>
+                    <li>Download v4.0.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v4.0.0 files into your existing version v3.0.0</li>
+                    <li>Run composer install to update composer dependencies</li>
+                    <li>Run <code>php artisan migrate</code> to make new build</li>
+                    <li>Run npm install</li>
+                    <li>And at last Run npm run dev to make new build</li>
+                    <li>That's it!, you are ready to go with new version v4.0.0</li>
+                </ul>
+                <h4 id="for-non-technical-users-3"><a href="#for-non-technical-users-3" class="header-anchor">#</a> For
+                    Non Technical Users:</h4>
+                <ul>
+                    <li>Download v4.0.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v4.0.0 files/directories into your existing version 3.0.0</li>
+                    <li>Now please call this URL once <code>YOUR_APP_URL/upgrade-to-v4.0.0</code></li>
+                    <li>That's it!, you are ready to go with new version v4.0.0</li>
+                </ul>
+                <h3 id="upgrading-from-v2-5-0-to-v3-0-0"><a href="#upgrading-from-v2-5-0-to-v3-0-0"
+                                                            class="header-anchor">#</a> Upgrading from v2.5.0 to v3.0.0
+                </h3> <h4 id="for-technical-users-4"><a href="#for-technical-users-4" class="header-anchor">#</a> For
+                    Technical Users:</h4>
+                <ul>
+                    <li>Download v3.0.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v3.0.0 files into your existing version v2.5.0</li>
+                    <li>Run composer install to update composer dependencies</li>
+                    <li>Run <code>php artisan migrate</code> to make new build</li>
+                    <li>Run npm install</li>
+                    <li>And at last Run npm run dev to make new build</li>
+                    <li>That's it!, you are ready to go with new version v3.0.0</li>
+                </ul>
+                <h4 id="for-non-technical-users-4"><a href="#for-non-technical-users-4" class="header-anchor">#</a> For
+                    Non Technical Users:</h4>
+                <ul>
+                    <li>Download v3.0.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v3.0.0 files/directories into your existing version 2.5.0</li>
+                    <li>Now please call this URL once <code>YOUR_APP_URL/upgrade-to-v3.0.0</code></li>
+                    <li>That's it!, you are ready to go with new version v3.0.0</li>
+                </ul>
+                <h3 id="upgrading-from-v2-0-0-to-v2-5-0"><a href="#upgrading-from-v2-0-0-to-v2-5-0"
+                                                            class="header-anchor">#</a> Upgrading from v2.0.0 to v2.5.0
+                </h3> <h4 id="for-technical-users-5"><a href="#for-technical-users-5" class="header-anchor">#</a> For
+                    Technical Users:</h4>
+                <ul>
+                    <li>Download v2.5.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v2.5.0 files into your existing version v2.0.0</li>
+                    <li>Run composer install to update composer dependencies</li>
+                    <li>Run <code>php artisan migrate</code> to make new build</li>
+                    <li>Run npm install</li>
+                    <li>And at last Run npm run dev to make new build</li>
+                    <li>That's it!, you are ready to go with new version v2.5.0</li>
+                </ul>
+                <h4 id="for-non-technical-users-5"><a href="#for-non-technical-users-5" class="header-anchor">#</a> For
+                    Non Technical Users:</h4>
+                <ul>
+                    <li>Download v2.5.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v2.5.0 files/directories into your existing version 2.0.0</li>
+                    <li>Now please call this URL once <code>YOUR_APP_URL/upgrade-to-v2.5.0</code></li>
+                    <li>That's it!, you are ready to go with new version v2.5.0</li>
+                </ul>
+                <h3 id="upgrading-from-v1-0-0-to-v2-0-0"><a href="#upgrading-from-v1-0-0-to-v2-0-0"
+                                                            class="header-anchor">#</a> Upgrading from v1.0.0 to v2.0.0
+                </h3> <h4 id="for-technical-users-6"><a href="#for-technical-users-6" class="header-anchor">#</a> For
+                    Technical Users:</h4>
+                <ul>
+                    <li>Download v2.0.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v2.0.0 files into your existing version v1.0.0</li>
+                    <li>Run composer install to update composer dependencies</li>
+                    <li>Run <code>php artisan migrate</code> to make new build</li>
+                    <li>Run npm install</li>
+                    <li>And at last Run npm run dev to make new build</li>
+                    <li>That's it!, you are ready to go with new version v2.0.0</li>
+                </ul>
+                <h4 id="for-non-technical-users-6"><a href="#for-non-technical-users-6" class="header-anchor">#</a> For
+                    Non Technical Users:</h4>
+                <ul>
+                    <li>Download v2.0.0</li>
+                    <li>Backup your current version files and DB</li>
+                    <li>If you have manually changed any files then please take a backup of them. After replacing files,
+                        you can again get that portion of code into some particular files.
+                    </li>
+                    <li>Replace v2.0.0 files/directories into your existing version v1.0.0</li>
+                    <li>Now please call this URL once <code>YOUR_APP_URL/upgrade-to-v2.0.0</code></li>
+                    <li>That's it!, you are ready to go with new version v2.0.0</li>
+                </ul> -->
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a class="btn btn-primary" style="margin-left: 37%;" href="https://infyom.com/infyinvoices-saas/docs/upgrade-guide" role="button">Click Here</a>
+                    <p class="py-1" style="margin-left: 25%;">You can go with our new upgrade guideline by clicking the above button.</p>
+                </div>
+            </div>
+            <!-- <footer class="page-edit"></footer> -->
+        </main>
+    </div>
+    <div class="global-ui"></div>
+</div>
+<script src="../js/styles.js" defer></script>
+<script src="../js/2.js" defer></script>
+<script src="../js/12.js" defer></script>
+</body>
+</html>

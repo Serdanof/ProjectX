@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Guide | InfyInvoices-SasS</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="../images/invoiceLogo.ico">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/fontawesome.css">
+    <link rel="stylesheet" href="../css/circular-std-font-face.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.6.12/css/lightgallery.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.2/js/lightgallery.js"></script>
+    <meta name="description"
+          content="InfyInvoices-SaaS is a fully-featured Multi Invoice Management System to manage your customer invoices and manage its invoice payment.">
+
+    <link rel="preload" href="../assets/css/0.styles.36c25529.css" as="style">
+    <link rel="preload" href="../js/styles.js" as="script">
+    <link rel="preload" href="../js/2.js" as="script">
+    <link rel="preload" href="../js/10.js" as="script">
+    <link rel="prefetch" href="../js/11.js">
+    <link rel="prefetch" href="../js/12.js">
+    <link rel="prefetch" href="../js/3.js">
+    <link rel="prefetch" href="../js/4.js">
+    <link rel="prefetch" href="../js/5.js">
+    <link rel="prefetch" href="../js/6.js">
+    <link rel="prefetch" href="../js/7.js">
+    <link rel="prefetch" href="../js/8.js">
+    <link rel="prefetch" href="../js/9.js">
+    <link rel="stylesheet" href="../assets/css/0.styles.36c25529.css">
+</head>
+<body>
+<div id="app" data-server-rendered="true">
+    <div class="theme-container">
+        <header class="navbar">
+            <div class="sidebar-button">
+                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512"
+                     class="icon">
+                    <path fill="currentColor"
+                          d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path>
+                </svg>
+            </div>
+            <a href="../index.html" class="home-link router-link-active"><img src="../images/invoice_logo.png" alt="InfyInvoices-SasS"
+                                                                  class="logo"> <span class="site-name can-hide">InfyInvoices-SasS</span></a>
+            <div class="links"><!---->
+                <nav class="nav-links can-hide">
+                    <div class="nav-item"><a href="../index.html" class="nav-link">
+                        Home
+                    </a></div>
+                    <div class="nav-item"><a href="#" aria-current="page"
+                                             class="nav-link router-link-exact-active router-link-active">
+                        Docs
+                    </a></div>
+                    <div class="nav-item"><a href="../releases/index.html" class="nav-link">
+                        Releases
+                    </a></div>
+                    <div class="nav-item"><a href="../upgrade/index.html" class="nav-link">
+                        Upgrade Guide
+                    </a></div> <!----></nav>
+            </div>
+        </header>
+        <div class="sidebar-mask"></div>
+        <aside class="sidebar">
+            <nav class="nav-links">
+                <div class="nav-item"><a href="/" class="nav-link">
+                    Home
+                </a></div>
+                <div class="nav-item"><a href="/docs/" aria-current="page"
+                                         class="nav-link router-link-exact-active router-link-active">
+                    Docs
+                </a></div>
+                <div class="nav-item"><a href="/releases/" class="nav-link">
+                    Releases
+                </a></div>
+                <div class="nav-item"><a href="/upgrade/" class="nav-link">
+                    Upgrade Guide
+                </a></div> <!----></nav>
+            <ul class="sidebar-links">
+                <li>
+                    <section class="sidebar-group depth-0"><p class="sidebar-heading open"><span>Guide</span> <!---->
+                    </p>
+                        <ul class="sidebar-links sidebar-group-items">
+                            <li><a href="#technologies-used" class="sidebar-link">Technologies Used</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#installation-guide" class="sidebar-link">Installation Guide</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#system-requirement"
+                                                                      class="sidebar-link">System Requirement</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#setup-infyinvoices-saas-into-local-environment" class="sidebar-link">Setup
+                                InfyInvoices-SaaS into Local Environment</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a
+                                            href="#_1-install-xampp-wamp-if-you-don-t-have-it"
+                                            class="sidebar-link">1. Install xampp/wamp (if you don't have it).</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_2-create-folder-infyinvoices-saas"
+                                                                      class="sidebar-link">2. Create folder
+                                        InfyInvoices-SaaS</a></li>
+                                    <li class="sidebar-sub-header"><a
+                                            href="#_3-unzip-dist-zip-to-infyinvoices-saas-folder"
+                                            class="sidebar-link">3. Unzip dist zip to InfyInvoices-SaaS folder</a></li>
+                                    <li class="sidebar-sub-header"><a
+                                            href="#_4-point-the-domain-to-the-uploaded-folder"
+                                            class="sidebar-link">4. Point the domain to the uploaded folder</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_5-setup-the-project-s-details"
+                                                                      class="sidebar-link">5. Setup the project's
+                                        details</a></li>
+                                    <li class="sidebar-sub-header"><a href="#setup-infyinvoices-saas-system"
+                                                                      class="sidebar-link">Setup InfyInvoices-SaaS
+                                        System</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_1-copy-files-to-web-server"
+                                                                      class="sidebar-link">1. Copy files to web
+                                        server</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_2-setup-default-db"
+                                                                      class="sidebar-link">2. Setup Default DB</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_3-setup-environment-env-file"
+                                                                      class="sidebar-link">3. Setup environment .env
+                                        file</a></li>
+                                    <li class="sidebar-sub-header"><a href="#setup-payment-credentials-settings"
+                                                                      class="sidebar-link">Setup Payment Credentials
+                                        Settings</a></li>
+                                    <li class="sidebar-sub-header"><a href="#cron-jobs-setup"
+                                                                      class="sidebar-link">Cron jobs Setup</a></li>
+                                    <li class="sidebar-sub-header"><a href="#_4-login" class="sidebar-link">4.
+                                        Login</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#key-features-and-concepts" class="sidebar-link">Key Features and
+                                Concepts</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#multi-languages-support" class="sidebar-link">Multi languages
+                                Support</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#landing-page" class="sidebar-link">Landing Page</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#super-admin-panel" class="sidebar-link">Super Admin Panel</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#users" class="sidebar-link">Users</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#subscription-plan"
+                                                                      class="sidebar-link">Subscription Plan</a></li>
+                                    <li class="sidebar-sub-header"><a href="#enquiries" class="sidebar-link">Enquiries</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#subscribers" class="sidebar-link">Subscribers</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#landing-cms" class="sidebar-link">Landing
+                                        CMS</a></li>
+                                    <li class="sidebar-sub-header"><a href="#settings" class="sidebar-link">Settings</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#admin-panel" class="sidebar-link">Admin Panel</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#dashboard" class="sidebar-link">Dashboard</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#clients"
+                                                                      class="sidebar-link">Clients</a></li>
+                                    <li class="sidebar-sub-header"><a href="#products" class="sidebar-link">Products</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#product-categories"
+                                                                      class="sidebar-link">Product Categories</a></li>
+                                    <li class="sidebar-sub-header"><a href="#taxes" class="sidebar-link">Taxes</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#transactions" class="sidebar-link">Transactions</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#payment"
+                                                                      class="sidebar-link">Payment</a></li>
+                                    <li class="sidebar-sub-header"><a href="#settings-2" class="sidebar-link">Settings</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#invoice-template"
+                                                                      class="sidebar-link">Invoice Template</a></li>
+                                    <li class="sidebar-sub-header"><a href="#multi-currency" class="sidebar-link">Multi
+                                        Currency</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#multi-lingual" class="sidebar-link">Multi Lingual</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                            <li><a href="#client-panel" class="sidebar-link">Client Panel</a>
+                                <ul class="sidebar-sub-headers">
+                                    <li class="sidebar-sub-header"><a href="#dashboard-2" class="sidebar-link">Dashboard</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#invoices" class="sidebar-link">Invoices</a>
+                                    </li>
+                                    <li class="sidebar-sub-header"><a href="#pay-invoice" class="sidebar-link">Pay
+                                        Invoice</a></li>
+                                    <li class="sidebar-sub-header"><a href="#print-invoices" class="sidebar-link">Print
+                                        Invoices</a></li>
+                                    <li class="sidebar-sub-header"><a href="#transactions-2" class="sidebar-link">Transactions</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#payment-gateways" class="sidebar-link">Payment Gateways</a>
+                                <ul class="sidebar-sub-headers"></ul>
+                            </li>
+                        </ul>
+                    </section>
+                </li>
+            </ul>
+        </aside>
+        <main class="page">
+            <div class="theme-default-content content__default"><h1 id="guide"><a href="#guide"
+                                                                                  class="header-anchor">#</a> Guide</h1>
+                <p>Invoices-SaaS : Manage multiple invoices at once place.</p>
+                <h2 id="technologies-used"><a href="#technologies-used" class="header-anchor">#</a> Technologies Used
+                </h2>
+                <p>This system uses multiple technologies to give the best possible experience.</p>
+                <ul>
+                    <li>PHP with Laravel Framework</li>
+                    <li>MySQL 5.7+</li>
+                    <li>PHP 7.4+</li>
+                    <li>jQuery</li>
+                    <li>Ajax</li>
+                </ul>
+                <h2 id="installation-guide"><a href="#installation-guide" class="header-anchor">#</a> Installation Guide
+                </h2>
+                <p>We tried our best to make the installation of the system as easy as possible.
+                    System Requirements
+                    It is assumed that you have primary knowledge Laravel installation knowledge since this application
+                    is built on Laravel.</p>
+                <h3 id="system-requirement"><a href="#system-requirement" class="header-anchor">#</a> System Requirement
+                </h3>
+                <p>It is assumed that you have primary knowledge Laravel and JS application installation knowledge since
+                    this application is built on Laravel with JS.</p>
+                <p>You can read about laravel Requirements <a
+                        href="https://laravel.com/docs/8.x/deployment#server-requirements" target="_blank"
+                        rel="noopener noreferrer">here<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false" x="0px" y="0px" viewBox="0 0 100 100"
+                                                                 width="15" height="15" class="icon outbound"><path
+                        fill="currentColor"
+                        d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a></p>
+                <p>(Optional)
+                    You need update below variables in php.ini file if you want to send bigger files.</p>
+                <p>upload_max_filesize = 50M</p>
+                <p>max_file_uploads = 50</p>
+                <p>post_max_size = 100M</p>
+                <h2 id="setup-infyinvoices-saas-into-local-environment"><a
+                        href="#setup-infyinvoices-saas-into-local-environment" class="header-anchor">#</a> Setup
+                    InfyInvoices-SaaS into Local Environment</h2>
+                <p>You can setup InfyInvoices-SaaS into your local by using both zip files, but we recommend to use dist
+                    file, so you have to perform minimal steps.</p>
+                <p>Here are some steps to setup InfyInvoices-SaaS into your local environment :</p>
+                <h3 id="_1-install-xampp-wamp-if-you-don-t-have-it"><a
+                        href="#_1-install-xampp-wamp-if-you-don-t-have-it" class="header-anchor">#</a> 1. Install
+                    xampp/wamp (if you don't have it).</h3>
+                <h3 id="_2-create-folder-infyinvoices-saas"><a href="#_2-create-folder-infyinvoices-saas"
+                                                               class="header-anchor">#</a> 2. Create folder <code>InfyInvoices-SaaS</code>
+                </h3>
+                <ul>
+                    <li>if you are using wamp then create InfyInvoices-SaaS folder under you_path_to_wamp/www/</li>
+                    <li>if you are using xamp then create InfyInvoices-SaaS folder under you_path_to_xamp/htdocs/</li>
+                </ul>
+                <h3 id="_3-unzip-dist-zip-to-infyinvoices-saas-folder"><a
+                        href="#_3-unzip-dist-zip-to-infyinvoices-saas-folder" class="header-anchor">#</a> 3. Unzip dist
+                    zip to InfyInvoices-SaaS folder</h3>
+                <h3 id="_4-point-the-domain-to-the-uploaded-folder"><a
+                        href="#_4-point-the-domain-to-the-uploaded-folder" class="header-anchor">#</a> 4. Point the
+                    domain to the uploaded folder</h3>
+                <p>You need to create virtual host first to setup InfyInvoices-SaaS. You can find steps here to create
+                    virtual host.</p>
+                <ul>
+                    <li>You can find steps <a
+                            href="https://medium.com/d6-digital/create-virtual-host-for-apache-on-windows-10-by-using-xampp-8664b0427567"
+                            target="_blank" rel="noopener noreferrer">here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                                     aria-hidden="true"
+                                                                                     focusable="false" x="0px" y="0px"
+                                                                                     viewBox="0 0 100 100" width="15"
+                                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a> to create virtual host on
+                        <code>XAMPP</code>.
+                    </li>
+                    <li>You can find steps <a
+                            href="http://codedecode.co.in/blog/wordpress/set-up-virtual-host-with-wamp/" target="_blank"
+                            rel="noopener noreferrer">here<span><svg xmlns="http://www.w3.org/2000/svg"
+                                                                     aria-hidden="true" focusable="false" x="0px"
+                                                                     y="0px" viewBox="0 0 100 100" width="15"
+                                                                     height="15" class="icon outbound"><path
+                            fill="currentColor"
+                            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                            fill="currentColor"
+                            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                            class="sr-only">(opens new window)</span></span></a> to create virtual host on
+                        <code>WAMP</code>.
+                    </li>
+                </ul>
+                <p>Point your domain or subdomain to the InfyInvoices-SaaS folder.</p>
+                <p>Please note that, InfyInvoices-SaaS must be installed on a primary domain or subdomain. Installing on
+                    a sub-folder will not work, for example:</p>
+                <div class="language- extra-class"><pre><code>    example.com/InfyInvoices-SaaS (Invalid)
+    localhost/InfyInvoices-SaaS (Invalid) if you are putting it in sub folder or root website)
+    example.com (Valid)
+    local.InfyInvoices-SaaS.com (Valid)
+    InfyInvoices-SaaS.test (Valid)
+</code></pre>
+                </div>
+                <h3 id="_5-setup-the-project-s-details"><a href="#_5-setup-the-project-s-details" class="header-anchor">#</a>
+                    5. Setup the project's details</h3>
+                <p>Please <a href="#_2-setup-default-db">Click Here</a> to follow the next steps for project setup.</p>
+                <h3 id="setup-infyinvoices-saas-system"><a href="#setup-infyinvoices-saas-system" class="header-anchor">#</a>
+                    Setup InfyInvoices-SaaS System</h3>
+                <p>If you have purchased the InfyInvoices-SaaS system then you will be able to find the zip named <code>dist.zip</code>.
+                </p>
+                <p>If you want to setup <code>InfyInvoices-SaaS</code> into your local environment then you can take
+                    help from here <a href="#setup-InfyInvoices-SaaS-into-local-environment">here</a>.</p>
+                <p>Now if you want to setup InfyInvoices-SaaS on your server then you can directly copy the <code>dist.zip</code>
+                    folder to your web root directory on a server and the following steps:</p>
+                <h3 id="_1-copy-files-to-web-server"><a href="#_1-copy-files-to-web-server" class="header-anchor">#</a>
+                    1. Copy files to web server</h3>
+                <p>Upload <code>dist.zip</code> to your web server's root (public_html) and extract it there.</p>
+                <h3 id="_2-setup-default-db"><a href="#_2-setup-default-db" class="header-anchor">#</a> 2. Setup Default
+                    DB</h3>
+                <ol>
+                    <li>Open PHPMyAdmin on your server and do a login.</li>
+                </ol>
+                <p><img src="/images/docs-images/db1.png" alt="Setup Default DB"></p>
+                <ol start="2">
+                    <li>Click on the Databases tab.</li>
+                </ol>
+                <p><img src="../images/docs-images/db2.png" alt="Setup Default DB"></p>
+                <ol start="3">
+                    <li>Create a new database and specify a Database name of your choice and Click Create button.</li>
+                </ol>
+                <p><img src="../images/docs-images/db3.png" alt="Setup Default DB"></p>
+                <ol start="4">
+                    <li><p>Now on the left, select the database (infy_invoices) OR the one that you have created.</p>
+                    </li>
+                    <li><p>Click Import in the top menu</p></li>
+                </ol>
+                <p><img src="../images/docs-images/db4.png" alt="Setup Default DB"></p>
+                <ol start="6">
+                    <li>Under Import, choose the default sql file from <code>dist/database/infy_invoices.sql</code> and
+                        click button Go.
+                    </li>
+                </ol>
+                <p><img src="../images/docs-images/db5.png" alt="Setup Default DB"></p>
+                <h3 id="_3-setup-environment-env-file"><a href="#_3-setup-environment-env-file"
+                                                          class="header-anchor">#</a> 3. Setup environment .env file
+                </h3>
+                <ol>
+                    <li>Open .env file from your server's root folder.</li>
+                </ol>
+                <p><img src="../images/docs-images/setup.png" alt="Setup Default DB"></p>
+                <ol start="2">
+                    <li>Update your .env file</li>
+                </ol>
+                <p>You need to change the following information into your environment (.env) file.</p>
+                <div class="language- extra-class"><pre><code>- APP_NAME - Name of your Application
+- APP_URL - Change this URL with your server URL (including trailing path if you are putting it in sub folder or root website)
+- DB_HOST - Put your database hostname here
+- DB_PORT - Put your database port here if it does not default to 3306
+- DB_DATABASE - Change it to your database name
+- DB_USERNAME - Name of your database user
+- DB_PASSWORD - Password of your database user
+</code></pre>
+                </div>
+                <p>You will also need to set up mail configuration, you can read more about here for that setup based on
+                    mail service that you use.</p>
+                <div class="language- extra-class"><pre><code>- MAIL_MAILER 
+- MAIL_HOST
+- MAIL_PORT
+- MAIL_USERNAME
+- MAIL_PASSWORD
+- MAIL_ENCRYPTION
+- ADMIN_EMAIL
+- MAIL_FROM_ADDRESS=${ADMIN_EMAIL}
+- MAIL_FROM_NAME=&quot;${APP_NAME}&quot;
+</code></pre>
+                </div>
+                <p>If you want to store your files to direct your <code>s3</code> bucket then you have to use following
+                    <code>.env</code> variables.
+                    You need to change <code>FILESYSTEM_DRIVER</code> and <code>MEDIA_DISK</code> value to
+                    <code>s3</code> when you are using AWS file storage.</p>
+                <div class="language- extra-class"><pre><code>- AWS_ACCESS_KEY_ID=
+- AWS_SECRET_ACCESS_KEY=
+- AWS_DEFAULT_REGION=us-east-1
+- AWS_BUCKET=
+- AWS_ENDPOINT=
+- AWS_URL=
+</code></pre>
+                </div>
+                <p>Or you can use your choice of storage driver to store your media assets if you want. All of your
+                    attachments will be placed into that.</p>
+                <h3 id="setup-payment-credentials-settings"><a href="#setup-payment-credentials-settings"
+                                                               class="header-anchor">#</a> Setup Payment Credentials
+                    Settings</h3>
+                <p>Login to the panel and go to settings for updating payment gateway credentials.</p>
+                <p><img src="../images/docs-images/payment-setting.png" alt="Setup Payment Settings"></p>
+                <h3 id="cron-jobs-setup"><a href="#cron-jobs-setup" class="header-anchor">#</a> Cron jobs Setup</h3>
+                <p>Enable recurring invoices in cPanel. Here is the link by using it you will get an idea about how to
+                    set the cron for the recurring invoices.</p>
+                <p><a href="https://www.tutorialspoint.com/cpanel/cpanel_cron_jobs.htm" target="_blank"
+                      rel="noopener noreferrer">Link 1<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true"
+                                                                 focusable="false" x="0px" y="0px" viewBox="0 0 100 100"
+                                                                 width="15" height="15" class="icon outbound"><path
+                        fill="currentColor"
+                        d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon
+                        fill="currentColor"
+                        points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span
+                        class="sr-only">(opens new window)</span></span></a></p>
+                <h3 id="_4-login"><a href="#_4-login" class="header-anchor">#</a> 4. Login</h3>
+                <p>You can do super admin or admin login by accessing given URL.</p>
+                <p><code>YOUR_APP_URL/login</code></p>
+                <p>super admin email: <code>superadmin@infy-invoices.com</code></p>
+                <p>admin email: <code>admin@infy-invoices.com</code></p>
+                <p>client email: <code>client@infy-invoices.com</code></p>
+                <p>password: <code>123456</code></p>
+                <h2 id="key-features-and-concepts"><a href="#key-features-and-concepts" class="header-anchor">#</a> Key
+                    Features and Concepts</h2>
+                <p>Here are some Key Features and Concepts that InfyInvoices-SaaS provides.</p>
+                <h2 id="multi-languages-support"><a href="#multi-languages-support" class="header-anchor">#</a> Multi
+                    languages Support</h2>
+                <p>We are supporting multiple languages in each panel (Super Admin | Admin | Client)</p>
+                <h2 id="landing-page"><a href="#landing-page" class="header-anchor">#</a> Landing Page</h2>
+                <p>Beautiful landing page with attractive interface, And yes its totally mobile friendly.</p>
+                <p>In Landing page you can add your business information, its comes up with Pricing Plans, FAQs,
+                    Testimonials and contact us page, that's all users need 😃</p>
+                <p>Users can register for their invoice system via landing page and also check the pricing plans.</p>
+                <h2 id="super-admin-panel"><a href="#super-admin-panel" class="header-anchor">#</a> Super Admin Panel
+                </h2>
+                <h3 id="users"><a href="#users" class="header-anchor">#</a> Users</h3>
+                <p>You can create an admin from the Super-admin panel, and yes of course admin will get their separate
+                    panel, where they can manage their clients, products, invoices, and payments and perform related
+                    actions.</p>
+                <h3 id="subscription-plan"><a href="#subscription-plan" class="header-anchor">#</a> Subscription Plan
+                </h3>
+                <p>Here you can add your plans as per your needs. you can create trial plans, free plans, and paid
+                    plans.
+                    You can select related currencies as per your region.</p>
+                <h3 id="enquiries"><a href="#enquiries" class="header-anchor">#</a> Enquiries</h3>
+                <p>Customers can submit the inquiry from the home page &amp; Received inquiries on subscription plans
+                    will be shown to related Enquiries tables.</p>
+                <h3 id="subscribers"><a href="#subscribers" class="header-anchor">#</a> Subscribers</h3>
+                <p>Your followers can subscribe to your system via the landing page. you can see lists of subscribers'
+                    information here. and use their emails to notify them.</p>
+                <h3 id="landing-cms"><a href="#landing-cms" class="header-anchor">#</a> Landing CMS</h3>
+                <p>Here you can manage all the content of the landing page. you can see the contact us inquiries
+                    here.</p>
+                <p>Can add new testimonials, faq's can update the about us text, and many other things.</p>
+                <h3 id="settings"><a href="#settings" class="header-anchor">#</a> Settings</h3>
+                <p>Here you can manage all your application settings including :</p>
+                <ul>
+                    <li>Application Name</li>
+                    <li>Payment gateway credentials</li>
+                    <li>Email</li>
+                    <li>Phone</li>
+                    <li>Logo &amp; Favicon</li>
+                    <li>etc</li>
+                </ul>
+                <h2 id="admin-panel"><a href="#admin-panel" class="header-anchor">#</a> Admin Panel</h2>
+                <h3 id="dashboard"><a href="#dashboard" class="header-anchor">#</a> Dashboard</h3>
+                <p>Powerful admin dashboard where admin can see the overview of the application, what's going on, what
+                    are the revenue, etc.</p>
+                <h3 id="clients"><a href="#clients" class="header-anchor">#</a> Clients</h3>
+                <p>You can create a client from the admin panel, and yes of course clients will get their separate
+                    panel, where they can see his assigned/sent invoices and perform related actions.</p>
+                <h3 id="products"><a href="#products" class="header-anchor">#</a> Products</h3>
+                <p>You can create your products from where, which will be later used in invoice creation. You can define
+                    the price, set image and related information.</p>
+                <h3 id="product-categories"><a href="#product-categories" class="header-anchor">#</a> Product Categories
+                </h3>
+                <p>You can create different kinds of product categories which will be used in product creation, you can
+                    choose categories while creating products.</p>
+                <h3 id="taxes"><a href="#taxes" class="header-anchor">#</a> Taxes</h3>
+                <p>You can create different kinds of taxes from here, e.g GST / IGST / etc with related percentages.
+                    Taxes will be used while creation of the invoice.</p>
+                <h3 id="transactions"><a href="#transactions" class="header-anchor">#</a> Transactions</h3>
+                <p>All the invoices transactions will be listed here, either it will be manually or via stripe. you can
+                    see the detailed information here.</p>
+                <h3 id="payment"><a href="#payment" class="header-anchor">#</a> Payment</h3>
+                <p>Admin can do payment of Invoice through cash mode.</p>
+                <h3 id="settings-2"><a href="#settings-2" class="header-anchor">#</a> Settings</h3>
+                <p>You can manage to generate settings from here, like the app logo, favicon the currency, your payment
+                    gateway credentials and company address.</p>
+                <p>Also, you can manage the number format and decimal separator settings from here.</p>
+                <h3 id="invoice-template"><a href="#invoice-template" class="header-anchor">#</a> Invoice Template</h3>
+                <p>We are supporting the beautiful invoice template, which is used when you print the invoice template.
+                    You can manage the downloaded invoice format by using this interface.</p>
+                <h3 id="multi-currency"><a href="#multi-currency" class="header-anchor">#</a> Multi Currency</h3>
+                <p>You can add your currency here, whatever you want to show before the price everywhere. The selected
+                    currency will be reflected everywhere in the project.</p>
+                <h2 id="multi-lingual"><a href="#multi-lingual" class="header-anchor">#</a> Multi Lingual</h2>
+                <p>Its comes up with 9 different languages and multi currency options.</p>
+                <h2 id="client-panel"><a href="#client-panel" class="header-anchor">#</a> Client Panel</h2>
+                <h3 id="dashboard-2"><a href="#dashboard-2" class="header-anchor">#</a> Dashboard</h3>
+                <p>Attractive and Powerful dashboard from where client can see the overview of his invoices, how many
+                    invoices are still pending or paid, etc.</p>
+                <h3 id="invoices"><a href="#invoices" class="header-anchor">#</a> Invoices</h3>
+                <p>Client can see only assigned invoices, he can print invoices and check details of it. Also clients
+                    can pay the invoice by manually or via the stripe payment gateway.</p>
+                <h3 id="pay-invoice"><a href="#pay-invoice" class="header-anchor">#</a> Pay Invoice</h3>
+                <p>Clients can pay invoices by multiple ways. We are supporting the partial payment option, so let's say
+                    there is a $1000 invoice and the client wants to pay just $500 then he can choose Partial payment
+                    while paying the invoice.</p>
+                <p>Later when the client does the next payment he will just see $500 remains as he already paid
+                    $500.</p>
+                <h3 id="print-invoices"><a href="#print-invoices" class="header-anchor">#</a> Print Invoices</h3>
+                <p>Clients can print the invoices from the details screen, we are supporting the attractive invoices
+                    templates.</p>
+                <h3 id="transactions-2"><a href="#transactions-2" class="header-anchor">#</a> Transactions</h3>
+                <p>Here the client can see his invoices payment history and reports, whatever transaction he made will
+                    be recorded here.</p>
+                <h2 id="payment-gateways"><a href="#payment-gateways" class="header-anchor">#</a> Payment Gateways</h2>
+                <p>We are supporting the stripe, razorpay and paypal payment gateway to pay invoice from customer
+                    side.</p></div>
+            <footer class="page-edit"><!----> <!----></footer> <!----> </main>
+    </div>
+    <div class="global-ui"></div>
+</div>
+<script src="../js/styles.js" defer></script>
+<script src="../js/2.js" defer></script>
+<script src="../js/10.js" defer></script>
+</body>
+</html>
